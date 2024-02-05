@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
+import "../App.css"
 
 const TodoItem = ({task,deleteTask,toggleCompleted}) => {
     const handleToggle = () => {
         toggleCompleted(task.id);
     }
   return (
-    <div>
-        <input type='checkbox' checked={task.completed} onChange={handleToggle}/>
+    <div className='todoItem'>
+        <input className='todocheckbox' type='checkbox' checked={task.completed} onChange={handleToggle}/>
         <span>{task.text}</span>
-        <button onClick={()=>deleteTask(task.id)}>X</button>
+        <button className='btn red' onClick={()=>deleteTask(task.id)}>X</button>
     </div>
   )
 }

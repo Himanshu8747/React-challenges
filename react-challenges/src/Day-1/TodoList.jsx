@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TodoItem from "./TodoItem";
-
+import '../App.css';
 const TodoList = () => {
   const [text, setText] = useState("");
   const [tasks, setTasks] = useState([
@@ -41,16 +41,18 @@ const TodoList = () => {
   }
 
   return (
-    <div>
-      {tasks.map((task) => (
-        <TodoItem key={task.id} task={task} deleteTask={deleteTask} toggleCompleted={toggleTask}/>
-      ))}
+    <div className="todo-list">
       <input
+        className="text"
+        placeholder="Add a Todo...."
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button onClick={() => addTask(text)}>Add Task</button>
+      <button className="btn" onClick={() => addTask(text)}>Add Task</button>  
+      {tasks.map((task) => (
+        <TodoItem key={task.id} task={task} deleteTask={deleteTask} toggleCompleted={toggleTask}/>
+      ))}
     </div>
   );
 };
