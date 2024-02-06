@@ -27,6 +27,9 @@ const TodoList = () => {
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
+    if (tasks.length === 6) {
+      localStorage.removeItem("tasks");
+    }
   }, [tasks]);
 
   useEffect(() => {
@@ -46,7 +49,7 @@ const TodoList = () => {
 
   const addTask = (text) => {
     const newTask = {
-      id: tasks.length + 1,
+      id:Date.now,
       text,
       completed: false,
     };
