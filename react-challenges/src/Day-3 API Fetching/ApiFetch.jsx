@@ -10,16 +10,20 @@ const ApiFetch = () => {
         setData(data);
     }
   useEffect(()=>{
-    getData();
+    setTimeout(()=>{
+      getData();
+    },1000)
   },[])  
   return (
     <div>
-    {data.map((item) => (
+    {data.length===0 ? 
+      <h1>Loading.....</h1>
+      : data.map((item) => (
         <div key={item.id}>
             <h2>{item.title} | {item.userId}</h2>
             <p>{item.body}</p>
         </div>
-    ))}
+    ))}  
     </div>
   )
 }
