@@ -1,6 +1,7 @@
 // import TodoList from "./Day-1/TodoList"
+// import Modal from "./Day-2/Modal"
 
-import Modal from "./Day-2/Modal"
+import ApiFetch from "./Day-3 API Fetching/ApiFetch"
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
     <>
       <h1>React Challenges</h1>
       {/* <TodoList/> */}
-      <Modal/>
+      {/* <Modal/> */}
+      <ApiFetch/>
     </>
   )
 }
