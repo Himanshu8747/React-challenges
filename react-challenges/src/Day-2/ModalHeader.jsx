@@ -1,11 +1,7 @@
-const ModalHeader = ({title,setIsSetOpen}) => {
-  const closeModal=()=>{
-    setIsSetOpen(false);
-  }  
+const ModalHeader = ({title}) => {
   return (
     <div className="modal-header">
         <h2 className="modal-heading">{title}</h2>
-        <button className="close" onClick={closeModal}>X</button>
     </div>
   )
 }
