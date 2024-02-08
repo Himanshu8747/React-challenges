@@ -1,0 +1,32 @@
+/* ProductCard.css */
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    margin: 2%;
+    width: 300px;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .product span {
+    display: block;
+    font-weight: bold;
+    color: #007bff; /* Change the color to your preference */
+  }
+
+  .product-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
